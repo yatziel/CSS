@@ -8,16 +8,39 @@
 
   1. Selectores Básicos
 
-    - Selector Universal
-    - Selectores de Tipo
+    - Selector Universal -> Selecciona todos los elementos de un documento
+    - Selectores de Tipo -> Seleccionan un tipo de elemento de html
 
   2. Selectores de Clase
 
+    Seleccionan los elementos que tiene una clase específica.
+
+    Se usa la 'notación' de punto (.) antes del nombre de la clase.
+
+    .nombreClase {
+      propiedad: valor;
+    }
+
   3. Selectores de ID
+
+    Seleccionan un elemento único con un identificador específico.
+
+    Se usa el la 'notación' de numeral (#) antes del nombre del id.
+
+    #nombreId {
+      propiedad: valor;
+    }
 
   4. Selectores Combinados
 
     - Descendientes
+
+      Seleccionan elementos dentro de otros elementos.
+
+      elemento elementoInterno {
+        propiedad: valor;
+      }
+
     - Hijo directo
     - Elemento Adjacente
     - Hermano general
@@ -34,25 +57,17 @@
 
 */
 
-
-
-/* 
-
-  Selectores Básicos 
-  
-*/
-
-/* Universal -> Seleccionar todos los elementos de un documento */
+/* Universal */
 
 * {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   /* Resset Básico */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Selectores de Tipo -> Seleccionan un tipo de elemento en html */
+/* Selectores de Tipo */
 
 body {
   background-color: lightcyan;
@@ -68,4 +83,45 @@ p {
 
 header {
   background-color: lightgreen;
+}
+
+
+/* Selectores de Clase */
+
+.content {
+  background-color: darkslateblue;
+  padding: 48px;
+}
+
+.hero {
+  background-color: orange;
+  padding: 24px;
+}
+
+.hero-title {
+  background-color: darkmagenta;
+  padding: 16px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+/* Selector de Id */
+
+#about-title {
+  color: yellow;
+  font-size: 72px;
+}
+
+/* Combinado - Elementos Decendientes */
+
+aside section {
+  background-color: green;
+  padding: 48px;
+}
+
+.aside-section h3 {
+  color: white;
+  text-align: right;
+  padding: 24px;
+  background-color: lightcoral;
 }
