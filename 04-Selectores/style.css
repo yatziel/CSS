@@ -42,18 +42,64 @@
       }
 
     - Hijo directo
+
+      Selecciona elementos que son hijos directos de un elemento padre.
+
+      elemento > elementosHijos {
+        propiedad: valor;
+      }
+
     - Elemento Adjacente
+
+      Selecciona el primer elemento inmediamente despúes de otro. (Su hermano inmediato o  en ingles Siblings)
+
+      elemento + elementoAdjacente {
+        propiedad: valor;
+      }
+
     - Hermano general
-  
+
+      Selecciona todos los elmentos hermanos después de un elemento.
+
+      elemento ~ elementoHermanos { 
+        propiedad: valor;  
+      }
+
   5. Selectores de Atributos
 
     - Atributo
-    - Atributo - Valor
+
+    Selecciona elementos según el atributo que indiquemos. Sin importar su valor.
+
+    elemento[atributo] {
+      propiedad: valor;
+    }
+
+    - Atributo con Valor
+
+    Selecciona elementos según el atributo y el valor que índiquemos.
+
+    elemento[atributo=valor] {
+      propiedad: valor;
+    }
 
   6. Selectores Avanzados
 
     - Pseudo-clases
+
+    Seleccionamos elementos en un estado en particular.
+
+      elemento:pseudoclase {
+        propiedad: valor;
+      }
+
     - Pseudo-elementos
+
+    Selccionan partes específicas de un elemento en html
+
+      elemento::pseudoelemento {
+        propiedad: valor;
+      }
 
 */
 
@@ -124,4 +170,75 @@ aside section {
   text-align: right;
   padding: 24px;
   background-color: lightcoral;
+}
+
+
+/* Combinados - Hijos Directos */
+
+ul > li {
+  background-color: lightblue;
+}
+
+.lista > li {
+  font-size: 8px;
+  color: darkblue;
+}
+
+/* Combinados - Elemento Adjacente */
+
+h3 + ul {
+  list-style: none;
+}
+
+.bro + li {
+  background-color: red;
+}
+
+/* Combinados - Hermano General */
+
+.bro + li ~ li {
+  background-color: yellow;
+}
+
+.tercero ~ li {
+  color: black;
+  font-size: 40px;
+}
+
+/* Selectores de Atributo */
+
+a[href] {
+  display: block;
+  text-decoration: none;
+  color: magenta
+}
+
+/* Selectores de Atributo con Valor */
+
+a[href="https://www.instagram.com"] {
+  font-size: 48px;
+  color: orangered;
+}
+
+
+/* Pseudo-clases */
+
+a:hover {
+  background-color: purple;
+  color: white;
+  text-decoration: underline;
+}
+
+a:focus {
+  border: 10px solid red;
+}
+
+/* Pseudo-elementos */
+
+a::after {
+  content: "🔥";
+}
+
+a::before {
+  content: "Este es un enlace hacia: ";
 }
