@@ -1,0 +1,82 @@
+/* 
+
+  Fuentes
+
+  Las fuentes son un aspecto clave en el diseño web, influyen en la estética, legibilidad y jerarquía visual.
+
+  En CSS la propiedad que define el tipo de fuente en las reglas en:
+
+    font-family: "Nombre Fuente";
+
+  Fuentes Web Safe o Seguras son tipografías predeterminadas y que se pueden usar en cualquier sistema operativo y/o navegador web.
+
+    Por estilo o categoría:
+
+      - serif
+      - sans-serif
+      - monospace
+      - cursive -> script
+      - fantasy -> decorative
+  
+    Por nombre de la familia tipográfica
+
+      - Arial
+      - "Times New Roman"
+      - Verdana
+      - Geneva
+      - ...
+
+    * Los valores que tienen más de una palabras se escriben entre comillas "" o ''.
+
+    * Se recomienda usar fuentes de respaldo, si por alguna razón no se carga la fuente principal, se cargarán las fuentes secundarias.
+
+      - Arial, Verdana, sans-serif
+      - "Times New Roman", "Courier New", serif
+
+
+  Fuentes Personalizadas
+
+    + Fuentes externas
+
+    Son recursos que traemos de servidores remotos.
+
+      - Google Fonts
+      - Adobe Fonts
+      - Font Squirlt
+      - ...
+
+    + Fuentes internas
+
+    Son recursos que tenemos en nuestro propio servidor o sistema de carpetas
+
+      - Descargamos cátalogo de fuentes.
+      - Guardamos en una carpeta especifica de nustro sitio web.
+    
+*/
+
+html {
+
+  /* Por estilo o categoria */
+  
+  font-family: serif; /* Default, Patinada */
+  font-family: sans-serif; /* Sin patines, Palo Seco, Geometrica*/
+  font-family: monospace; /* Mono-espaciadas */
+  font-family: cursive; /* Script o escritura a mano */
+  font-family: fantasy; /* Decorativas con "glifos" no convencionales */
+
+  /* Por Nombre de familia tipográfica */
+
+  font-family: Arial;
+  font-family: "Times New Roman";
+  font-family: Verdana;
+  font-family: "Gill Sans";
+  font-family: Geneva;
+  font-family: "Courier New";
+
+  /* Fuentes de respaldo */
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
