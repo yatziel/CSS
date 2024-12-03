@@ -1,0 +1,132 @@
+/* 
+
+  Fuentes Personalizadas
+
+  - Fuentes Externas
+
+    Llamamos desde servidores remotos.
+
+
+  Google Fonts
+
+    Es un servicio o catalogo de fuentes que podemos usar me manera gratuita en internet.
+
+    - Optimizadas para digital
+    - Gratuitas de uso comercial
+    - Curadas y de alta calidad
+    - Código de vinculación para web
+
+    https://fonts.google.com/ 
+
+    1. Seleccionar la fuente y traemos el código de incrustación o embed code al html, lo pegamos dentro las etiquetas <head>
+
+    2. Definimos las reglas CSS para los elementos a los que se las queremos aplicar. 
+      
+      - Usamos las propiedades de font-family, font-weight, font-style, para las tipografías estáticas.
+
+
+  - Fuentes Internas
+
+    Llamamos desde nuestro propio servidor o carpeta de recursos.
+
+    1. Debemos tener los archivos en una capeta específica.
+    2. Formatos comunes son .ttf .otf .woff .woff2 etc...
+    3. Declaramos en CSS @font-face
+
+      @font-face { 
+        font-family: nombreFuente; // Dos palabras entre " "
+        src: url(ubicación), format(formato); // Ubicación y formato entre "" - NOTA: NO olvidar la coma despues de la URL
+      }
+
+    4. Creamos la regla CSS
+
+      selector {
+        font-family: nombreFuente, respaldo; 
+      }
+
+*/
+
+/* Tipografías Estáticas */
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* Elige el grosor o peso de la tipografía */
+  font-style: italic; /* Elige si es italica o cursiva */
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+/* Tipografías Variables */
+
+.title {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 876;
+  font-style: italic;
+  transition: font-weight 1s ease;
+}
+
+.title:hover {
+  font-weight: 182;
+  transition: font-weight 1s ease;
+}
+
+.text {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 456;
+  font-style: normal;
+}
+
+
+/* 
+
+  Elegir dos fuentes distintas en google fonts.
+  Una para el titulo
+  Una para el párrafo
+  Crear la regla CSS para cada elemento con un selector de id.
+
+  Nota: Comentar los codigos de inscrutación anteriores.
+
+*/
+
+
+#title {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+#text {
+  font-family: "Bokor", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Fuentes Internas */
+
+@font-face {
+  font-family: "Winter Selfie";
+  src: url("./fonts/winter-selfie.otf"), format("otf");
+}
+
+@font-face {
+  font-family: "Clouts";
+  src: url("./fonts/clouts.ttf"), format("ttf");
+}
+
+#title {
+  font-family: "Winter Selfie", sans-serif;
+}
+
+#text {
+  font-family: "Clouts", sans-serif;
+}
+
+
+/* Commit: "Fuentes Personalizadas" */
