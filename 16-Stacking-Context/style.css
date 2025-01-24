@@ -1,0 +1,77 @@
+/* 
+
+  Stacking Context
+
+  El contexto de apilamiento, es el espacio donde los elementos se van apilando para que uno quede delante de otro.
+
+  El navegador deterimna que elemento coloca sobre otro, deacuerdo a como se escriben en el html.
+
+  Para el contexto de apilamiento usará la siguiente jerarquía:
+
+  1. Elementos posicionados con un z-index igual o mayor a 1.
+  2. Elementos posicionados sin un z-index o con un z-index: auto.
+  3. Elementos no posicionados.
+  4. Elementos posicionados con un z-index igual o menor a -1
+
+  z-index
+
+  Nos permite ordenar los elementos superpuestos y controlar el contexto de apilamiento.
+
+  OJO: Para poder usar z-index el elmento debe estar posicionado -> con la propiedad 'position' declarada.
+
+  Recomendaciones:
+
+  - No usar números consecutivos. 1,2,3,4,5... -> No es recomendable
+  - Se recomienda usar decenas o centenas -> 10, 20, 30, 40... o 100, 200, 300, 400...
+  - No usar número en miles -> 1000, 2000, 3000... 99999999999 -> no es bien visto por los desarrolladores. 
+
+*/
+
+/* Reset Básico */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: whitesmoke;
+  background-color: darkslateblue;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  padding-top: 24px;
+  border: 1px solid black;
+  border-radius: 24px;
+}
+
+.box-1 {
+  position: relative;
+  top: 25px;
+  z-index: 1;
+  background-color: lightgreen;
+}
+.box-2 {
+  position: relative;
+  z-index: auto; /* Esto igual a no declararlo */
+  background-color: lightblue;
+}
+.box-3 {
+  /* No esta posicionado, no tiene declarada niguna posición */
+  margin-top: -25px;
+  background-color: lightcoral;
+}
+.box-4 {
+  position: relative;
+  top: -25px;
+  z-index: -1;
+  background-color: lightseagreen;
+}
+
+
+/* Commit: "Contexto de aplilamiento y z-index" */
