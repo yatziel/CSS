@@ -46,6 +46,14 @@
 
 */
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 24px;
+}
+
 body {
   font-family: sans-serif;
   margin: 20px;
@@ -61,6 +69,7 @@ h2 {
 }
 
 section {
+  font-size: 20px;
   margin: 40px 0;
   padding: 20px;
   border: 1px solid white;
@@ -99,3 +108,43 @@ div {
   height: 0.5in;
   background-color: darksalmon;
 }
+
+/* Unidades Relativas */
+
+.relative-box {
+  border-radius: 12px;
+}
+
+.em {
+  font-size: 3em; /* Equivale al font-size del padre = 60px */
+  background-color: darksalmon;
+}
+
+.rem {
+  font-size: 3rem; /* Equivale al font-size del root (html) = 32px */
+  background-color: darkslateblue;
+}
+
+.percent {
+  width: 50%;
+  height: 100px;
+  background-color: darkblue;
+}
+
+.vw {
+  background-color: darkcyan;
+}
+
+.vh {
+  background-color: darkmagenta;
+}
+
+.vmin {
+  background-color: darkgoldenrod;
+}
+
+.vmax {
+  background-color: darkred;
+}
+
+/* Unidades Relativas Parte Inbhju8 */
